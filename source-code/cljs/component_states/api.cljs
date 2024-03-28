@@ -9,7 +9,7 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Component states
+; @tutorial Component States
 ;
 ; The states of UI components indicate various conditions of the component,
 ; such as being pressed, hovered over, highlighted, and more, reflecting their interactive behavior
