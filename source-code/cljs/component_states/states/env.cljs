@@ -11,7 +11,7 @@
 
 (defn add-component-state-events
   ; @description
-  ; Associates state related events of the component to the given property map
+  ; Associates the state related events of the component to the given property map
   ; in case of any event controlled state (':focused', ':hovered' or ':pressed') is provided.
   ;
   ; @param (keyword) component-id
@@ -24,9 +24,9 @@
   ; @usage
   ; (add-component-state-events :my-component {:focused {:my-key "My value"} ...})
   ; =>
-  ; {:focused     {:my-key "My value"}
-  ;  :on-focus-f  (fn [_] (mark-component-as-focused!   :my-component))
-  ;  :on-blur-f   (fn [_] (unmark-component-as-focused! :my-component))
+  ; {:focused    {:my-key "My value"}
+  ;  :on-focus-f (fn [_] (mark-component-as-focused!   :my-component))
+  ;  :on-blur-f  (fn [_] (unmark-component-as-focused! :my-component))
   ;  ...}
   ;
   ; @usage
@@ -46,15 +46,12 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:focused (map)
-  ;  :hovered (map)
-  ;  :on-blur-f (function)
+  ; {:on-blur-f (function)
   ;  :on-focus-f (function)
   ;  :on-mouse-down-f (function)
   ;  :on-mouse-leave-f (function)
   ;  :on-mouse-over-f (function)
   ;  :on-mouse-up-f (function)
-  ;  :pressed (map)
   ;  ...}
   [component-id {:keys [focused hovered pressed] :as component-props}]
   (letfn [(f0 [_] (side-effects/mark-component-as-focused!   component-id))
@@ -75,7 +72,7 @@
 
 (defn import-component-states
   ; @description
-  ; Imports dynamically set component state toggle values into the given property map.
+  ; Imports all dynamically set component state toggles (e.g., ':active?' ':disabled?', etc.) into the given property map.
   ;
   ; @param (keyword) component-id
   ; @param (map) component-props
