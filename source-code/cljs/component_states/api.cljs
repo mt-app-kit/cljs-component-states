@@ -1,7 +1,9 @@
 
 (ns component-states.api
     (:require [component-states.mark.env :as mark.env]
-              [component-states.mark.side-effects :as mark.side-effects]))
+              [component-states.mark.side-effects :as mark.side-effects]
+              [component-states.states.env :as states.env]
+              [component-states.states.attributes :as states.attributes]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -98,6 +100,9 @@
 (def unmark-component-as-selected!    mark.side-effects/unmark-component-as-selected!)
 (def mark-component-as-succeeded!     mark.side-effects/mark-component-as-succeeded!)
 (def unmark-component-as-succeeded!   mark.side-effects/unmark-component-as-succeeded!)
+
+; @redirect (component-states.states.attributes/*)
+(def component-state-attributes states.attributes/component-state-attributes)
 
 ; @redirect (component-states.states.env/*)
 (def add-component-state-events states.env/add-component-state-events)

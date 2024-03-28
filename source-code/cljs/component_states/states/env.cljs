@@ -1,6 +1,6 @@
 
 (ns component-states.states.env
-    (:require [component-states.mark.side-effects :as mark-side-effects]
+    (:require [component-states.mark.side-effects :as mark.side-effects]
               [component-states.mark.env :as mark.env]
               [component-states.states.utils :as states.utils]
               [fruits.map.api :as map]
@@ -54,12 +54,12 @@
   ;  :on-mouse-up-f (function)
   ;  ...}
   [component-id {:keys [focused hovered pressed] :as component-props}]
-  (letfn [(f0 [_] (side-effects/mark-component-as-focused!   component-id))
-          (f1 [_] (side-effects/unmark-component-as-focused! component-id))
-          (f2 [_] (side-effects/mark-component-as-hovered!   component-id))
-          (f3 [_] (side-effects/unmark-component-as-hovered! component-id))
-          (f4 [_] (side-effects/mark-component-as-pressed!   component-id))
-          (f5 [_] (side-effects/unmark-component-as-pressed! component-id))]
+  (letfn [(f0 [_] (mark.side-effects/mark-component-as-focused!   component-id))
+          (f1 [_] (mark.side-effects/unmark-component-as-focused! component-id))
+          (f2 [_] (mark.side-effects/mark-component-as-hovered!   component-id))
+          (f3 [_] (mark.side-effects/unmark-component-as-hovered! component-id))
+          (f4 [_] (mark.side-effects/mark-component-as-pressed!   component-id))
+          (f5 [_] (mark.side-effects/unmark-component-as-pressed! component-id))]
          (cond-> component-props focused (hiccup/merge-event-fn :on-focus-f       f0)
                                  focused (hiccup/merge-event-fn :on-blur-f        f1)
                                  hovered (hiccup/merge-event-fn :on-mouse-over-f  f2)
