@@ -14,7 +14,7 @@
   ; @usage
   ; (mark-component-as-active! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :active? true))
+  (common-state/assoc-state! :component-states component-id :active? true))
 
 (defn unmark-component-as-active!
   ; @description
@@ -25,7 +25,7 @@
   ; @usage
   ; (unmark-component-as-active! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :active?))
+  (common-state/dissoc-state! :component-states component-id :active?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -39,7 +39,7 @@
   ; @usage
   ; (mark-component-as-disabled! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :disabled? true))
+  (common-state/assoc-state! :component-states component-id :disabled? true))
 
 (defn unmark-component-as-disabled!
   ; @description
@@ -50,7 +50,7 @@
   ; @usage
   ; (unmark-component-as-disabled! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :disabled?))
+  (common-state/dissoc-state! :component-states component-id :disabled?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -64,7 +64,7 @@
   ; @usage
   ; (mark-component-as-failured! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :failured? true))
+  (common-state/assoc-state! :component-states component-id :failured? true))
 
 (defn unmark-component-as-failured!
   ; @description
@@ -75,7 +75,7 @@
   ; @usage
   ; (unmark-component-as-failured! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :failured?))
+  (common-state/dissoc-state! :component-states component-id :failured?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -89,7 +89,7 @@
   ; @usage
   ; (mark-component-as-focused! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :focused? true))
+  (common-state/assoc-state! :component-states component-id :focused? true))
 
 (defn unmark-component-as-focused!
   ; @description
@@ -100,7 +100,7 @@
   ; @usage
   ; (unmark-component-as-focused! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :focused?))
+  (common-state/dissoc-state! :component-states component-id :focused?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -114,7 +114,7 @@
   ; @usage
   ; (mark-component-as-highlighted! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :highlighted? true))
+  (common-state/assoc-state! :component-states component-id :highlighted? true))
 
 (defn unmark-component-as-highlighted!
   ; @description
@@ -125,7 +125,7 @@
   ; @usage
   ; (unmark-component-as-highlighted! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :highlighted?))
+  (common-state/dissoc-state! :component-states component-id :highlighted?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -139,7 +139,7 @@
   ; @usage
   ; (mark-component-as-hovered! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :hovered? true))
+  (common-state/assoc-state! :component-states component-id :hovered? true))
 
 (defn unmark-component-as-hovered!
   ; @description
@@ -150,7 +150,7 @@
   ; @usage
   ; (unmark-component-as-hovered! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :hovered?))
+  (common-state/dissoc-state! :component-states component-id :hovered?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -164,7 +164,7 @@
   ; @usage
   ; (mark-component-as-pressed! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :pressed? true))
+  (common-state/assoc-state! :component-states component-id :pressed? true))
 
 (defn unmark-component-as-pressed!
   ; @description
@@ -175,7 +175,7 @@
   ; @usage
   ; (unmark-component-as-pressed! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :pressed?))
+  (common-state/dissoc-state! :component-states component-id :pressed?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -189,7 +189,7 @@
   ; @usage
   ; (mark-component-as-selected! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :selected? true))
+  (common-state/assoc-state! :component-states component-id :selected? true))
 
 (defn unmark-component-as-selected!
   ; @description
@@ -200,7 +200,7 @@
   ; @usage
   ; (unmark-component-as-selected! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :selected?))
+  (common-state/dissoc-state! :component-states component-id :selected?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -214,7 +214,7 @@
   ; @usage
   ; (mark-component-as-succeeded! :my-component)
   [component-id]
-  (common-state/assoc-state! :component-states :components component-id :succeeded? true))
+  (common-state/assoc-state! :component-states component-id :succeeded? true))
 
 (defn unmark-component-as-succeeded!
   ; @description
@@ -225,4 +225,4 @@
   ; @usage
   ; (unmark-component-as-succeeded! :my-component)
   [component-id]
-  (common-state/dissoc-state! :component-states :components component-id :succeeded?))
+  (common-state/dissoc-state! :component-states component-id :succeeded?))

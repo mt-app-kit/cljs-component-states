@@ -18,7 +18,7 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :active?))
+  (common-state/get-state :component-states component-id :active?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -36,7 +36,7 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :disabled?))
+  (common-state/get-state :component-states component-id :disabled?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -54,7 +54,7 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :failured?))
+  (common-state/get-state :component-states component-id :failured?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -72,7 +72,7 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :focused?))
+  (common-state/get-state :component-states component-id :focused?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -90,7 +90,7 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :highlighted?))
+  (common-state/get-state :component-states component-id :highlighted?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -108,7 +108,7 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :hovered?))
+  (common-state/get-state :component-states component-id :hovered?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -126,7 +126,7 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :pressed?))
+  (common-state/get-state :component-states component-id :pressed?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -144,7 +144,7 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :selected?))
+  (common-state/get-state :component-states component-id :selected?))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -162,4 +162,4 @@
   ;
   ; @return (boolean)
   [component-id]
-  (common-state/get-state :component-states :components component-id :succeeded?))
+  (common-state/get-state :component-states component-id :succeeded?))

@@ -3,7 +3,8 @@
     (:require [component-states.mark.env :as mark.env]
               [component-states.mark.side-effects :as mark.side-effects]
               [component-states.states.env :as states.env]
-              [component-states.states.attributes :as states.attributes]))
+              [component-states.states.attributes :as states.attributes]
+              [component-states.states.listeners :as states.listeners]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -108,3 +109,7 @@
 (def add-component-state-events states.env/add-component-state-events)
 (def import-component-states    states.env/import-component-states)
 (def apply-component-states     states.env/apply-component-states)
+
+; @redirect (component-states.states.listeners/*)
+(def add-component-pressed-state-listener!    states.listeners/add-component-pressed-state-listener!)
+(def remove-component-pressed-state-listener! states.listeners/remove-component-pressed-state-listener!)

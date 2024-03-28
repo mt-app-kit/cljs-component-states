@@ -24,4 +24,5 @@
   ; @return (map)
   [component-props state-key]
   (if-let [state (get component-props state-key)]
-          (map/deep-merge component-props state)))
+          (-> component-props (map/deep-merge state))
+          (-> component-props)))

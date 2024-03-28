@@ -72,7 +72,7 @@
 
 (defn import-component-states
   ; @description
-  ; Imports all dynamically set component state toggles (e.g., ':active?' ':disabled?', etc.) into the given property map.
+  ; Imports all dynamically set state toggles of the component (e.g., ':active?' ':disabled?', etc.) into the given property map.
   ;
   ; @param (keyword) component-id
   ; @param (map) component-props
@@ -111,7 +111,7 @@
 
 (defn apply-component-states
   ; @description
-  ; Applies the current states of the component on the given property map.
+  ; Applies the current states (e.g., ':active', ':disabled', etc.) of the component on the given property map.
   ;
   ; @param (keyword) id
   ; @param (map) props
